@@ -10,7 +10,7 @@ def pytest_bdd_step_error(request, feature, scenario, step, step_func, step_func
 
 
 @pytest.fixture
-def browser():
+def driver():
     driver = webdriver.Firefox()
     driver.implicitly_wait(10)
     yield driver
@@ -18,5 +18,5 @@ def browser():
 
 
 @given("the ESPN page is displayed")
-def espnHome(browser):
-    browser.get(ESPN_HOME_PAGE)
+def espnHome(driver):
+    driver.get(ESPN_HOME_PAGE)
