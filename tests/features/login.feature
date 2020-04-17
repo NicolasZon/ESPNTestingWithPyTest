@@ -5,6 +5,10 @@ Feature: Create an ESPN account
 Background:
     Given the ESPN page is displayed
 
-  Scenario: Log into ESPN web page
-    When the user performs the flow to log into ESPN
-    Then the user can see her name in the user section
+  Scenario Outline: Log into ESPN web page
+    When the user performs the flow to log into ESPN with "<mail>" and "<password>"
+    Then the user can see the "<name>" in the user section
+
+    Examples:
+    | name    | mail                  | password        |
+    | Pedrito | pedritoperez@mail.com | pedritoperez123 |

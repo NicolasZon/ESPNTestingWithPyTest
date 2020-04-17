@@ -18,5 +18,5 @@ def driver():
 
 
 @given("the ESPN page is displayed")
-def espnHome(driver):
+def espn_home(driver):
     driver.get(ESPN_HOME_PAGE)
