@@ -2,7 +2,7 @@
 Feature: Create an ESPN account
   As a sport lover, I want to log into my ESPN account
 
-Background:
+  Background:
     Given the ESPN page is displayed
 
   Scenario Outline: Log into ESPN web page

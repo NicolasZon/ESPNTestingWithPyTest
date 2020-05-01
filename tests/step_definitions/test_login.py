@@ -4,9 +4,6 @@ from pytest_bdd import when, then, scenarios
 
 from tests.step_definitions.common_steps import open_frame_login, open_user_info, close_frame
 
-ESPN_HOME_PAGE = "https://www.espn.com/?src=com"
-
-
 scenarios('../features/login.feature')
 
 
