@@ -2,7 +2,7 @@
 Feature: Create an ESPN account
   As a sport lover, I want to have my own account in ESPN web page
 
-Background:
+  Background:
     Given the ESPN page is displayed
 
   Scenario: Sign up with a new user in ESPN web page
