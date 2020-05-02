@@ -2,7 +2,8 @@ import time
 
 from pytest_bdd import when, then, scenarios
 
-from tests.step_definitions.common_steps import open_frame_login, open_user_info, close_frame
+from tests.util.actions import open_user_info
+from tests.util.frames import open_frame_login, close_frame
 
 scenarios('../features/login.feature')
 

@@ -1,6 +1,7 @@
 from pytest_bdd import when, scenarios, then
 
-from tests.step_definitions.common_steps import open_frame_login, close_frame, scroll_to_the_end
+from tests.util.actions import scroll_to_the_end
+from tests.util.frames import open_frame_login, close_frame
 
 scenarios('../features/signup.feature')
 
@@ -19,7 +20,7 @@ def signup(driver):
     email = driver.find_element_by_name("email")
     email.send_keys("jiojaanw@mail.com")
     password = driver.find_element_by_name("newPassword")
-    password.send_keys("qwertyuiop")
+    password.send_keys("testing 123")
 
     scroll_to_the_end(driver)
 

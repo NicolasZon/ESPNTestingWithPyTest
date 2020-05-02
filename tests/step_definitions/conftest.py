@@ -2,7 +2,7 @@ import pytest
 from pytest_bdd import given
 from selenium import webdriver
 
-from tests.step_definitions.common_steps import open_close_iframe_banner_if_exists
+from tests.util.frames import open_close_iframe_banner_if_exists
 
 ESPN_HOME_PAGE = "https://www.espn.com/?src=com"
 

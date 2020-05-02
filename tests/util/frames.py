@@ -1,19 +1,8 @@
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver import ActionChains
+
+from tests.util.actions import open_user_info
 
 
-# Actions
-def open_user_info(driver):
-    action = ActionChains(driver)
-    user_trigger = driver.find_element_by_id("global-user-trigger")
-    action.move_to_element(user_trigger).perform()
-
-
-def scroll_to_the_end(driver):
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-
-
-# Frames
 def close_frame(driver):
     driver.switch_to.default_content()
 
