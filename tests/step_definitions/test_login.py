@@ -22,7 +22,7 @@ def login(driver, mail, password):
 
 
 @then('the user can see the "<name>" in the user section')
-def assert_login(driver, name):
+def assert_login(driver, name='Pepito'):
     open_user_info(driver)
     welcome_message = driver.find_element_by_class_name("display-user")
     expected_text = 'Welcome' + name + '!'

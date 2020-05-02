@@ -7,7 +7,7 @@ def close_frame(driver):
     driver.switch_to.default_content()
 
 
-def open_close_iframe_banner_if_exists(driver):
+def close_iframe_banner_if_exists(driver):
     try:
         banner_iframe = driver.find_element_by_xpath("//div[contains(@class, 'promo-banner-container')]/child::iframe")
         driver.switch_to_frame(banner_iframe)
