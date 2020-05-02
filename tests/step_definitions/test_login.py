@@ -3,14 +3,14 @@ import time
 from pytest_bdd import when, then, scenarios
 
 from tests.util.actions import open_user_info
-from tests.util.frames import open_frame_login, close_frame
+from tests.util.frames import switch_to_frame_login, close_frame
 
 scenarios('../features/login.feature')
 
 
 @when('the user performs the flow to log into ESPN with "<mail>" and "<password>"')
 def login(driver, mail, password):
-    open_frame_login(driver)
+    switch_to_frame_login(driver)
     username_input = driver.find_element_by_css_selector("input.ng-valid-pattern")
     username_input.send_keys(mail)
     password_input = driver.find_element_by_css_selector(".ng-pristine")

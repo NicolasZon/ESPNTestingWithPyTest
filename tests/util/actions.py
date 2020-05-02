@@ -3,6 +3,8 @@ from selenium.webdriver import ActionChains
 
 def open_user_info(driver):
     action = ActionChains(driver)
+    search_trigger = driver.find_element_by_id("global-search-trigger")
+    action.move_to_element(search_trigger).perform()
     user_trigger = driver.find_element_by_id("global-user-trigger")
     action.move_to_element(user_trigger).perform()
 

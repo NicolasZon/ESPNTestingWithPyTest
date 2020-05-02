@@ -13,7 +13,11 @@ def destroy_file_data():
     os.remove("temp")
 
 
-def get_and_delete_older():
+def file_data_exist():
+    return os.path.exists("temp")
+
+
+def get_older_created_mail():
     file = open("temp", "r+")
     d = file.readlines()
 

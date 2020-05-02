@@ -5,14 +5,14 @@ from pytest_bdd import when, scenarios, then
 from tests.step_definitions.test_login import assert_login
 from tests.util.actions import scroll_to_the_end
 from tests.util.data import create_fake_mail
-from tests.util.frames import open_frame_login, close_frame
+from tests.util.frames import switch_to_frame_login, close_frame
 
 scenarios('../features/signup.feature')
 
 
 @when('the user performs the flow to create a new account')
 def signup(driver):
-    open_frame_login(driver)
+    switch_to_frame_login(driver)
 
     signup_button = driver.find_element_by_css_selector(".btn.btn-secondary.ng-isolate-scope")
     signup_button.click()
