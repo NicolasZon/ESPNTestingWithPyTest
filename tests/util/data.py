@@ -9,24 +9,27 @@ def create_fake_mail():
     return mail
 
 
-def get_data():
-    file = open("temp", "r")
-    data = file.readlines()
-    file.close()
-    return data
-
-
-def get_data_and_destroy_file():
-    data = get_data()
-    destroy_file_data()
-    return data
-
-
 def destroy_file_data():
     os.remove("temp")
 
 
+def get_and_delete_older():
+    file = open("temp", "r+")
+    d = file.readlines()
+
+    data = d[0][:-1]
+    if len(d) < 2:
+        destroy_file_data()
+        return data
+
+    file.seek(0)
+    for i in d[1:]:
+        file.write(i)
+    file.truncate()
+    return data
+
+
 def save_data_in_file(s):
     file = open("temp", "a")
-    file.write(s)
+    file.write(s + '\n')
     file.close()
