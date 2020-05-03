@@ -1,4 +1,4 @@
-@signup
+@delete
 Feature: Delete an ESPN account
   As a sport lover, I want to delete my account in ESPN web page
 
@@ -6,6 +6,6 @@ Feature: Delete an ESPN account
     Given there is data created previously
     And the ESPN page is displayed
 
-  Scenario: Sign up with a new user in ESPN web page
+  Scenario: Delete user in ESPN web page
     When the user performs the flow to delete his account
-    Then the user can see her name in the user section
+    Then the user can see deleted account message

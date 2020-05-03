@@ -4,7 +4,7 @@ import string
 
 
 def create_fake_mail():
-    mail = 'nico_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(5)) + "@mail.com"
+    mail = 'nico_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(6)) + "@mail.com"
     save_data_in_file(mail)
     return mail
 
